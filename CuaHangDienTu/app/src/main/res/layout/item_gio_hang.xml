@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    android:layout_margin="5dp"
+    android:elevation="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="250dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#93CFFF"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/item_giohang_img"
+                android:layout_width="140dp"
+                android:layout_height="180dp"
+                android:gravity="center"
+                android:src="@drawable/ic_media_24" />
+            <ImageView
+                android:id="@+id/item_giohang_delete"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_delete_24"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_giohang_tensp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Tên Sản Phẩm"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/item_giohang_giasp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Giá: 5.000.000 VNĐ"
+                android:textColor="@color/red"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/item_giohang_cong"
+                    android:layout_width="50dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    android:textSize="40dp" />
+                <TextView
+                    android:id="@+id/item_giohang_soluong"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="40dp" />
+                <TextView
+                    android:id="@+id/item_giohang_tru"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="@color/red"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="40dp" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/item_giohang_tongtien"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_background_2"
+                android:text="Tổng Tiền: "
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/red" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
