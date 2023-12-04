@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C9D2D6"
+    tools:context=".sanpham.SuaSanPhamActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Thêm sản phẩm"
+        app:titleTextColor="@color/white" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddSp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ScrollViewSize">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Danh mục"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/add_danhmuc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck">
+
+                </Spinner>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="#C9D2D6"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tên sản phẩm"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:id="@+id/txtErrorTensp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Error"
+                    android:textColor="@color/red"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addsp_tensp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/white"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/black"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hình Ảnh"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+
+                    />
+                <TextView
+                    android:id="@+id/txtErrorHinhanh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Error"
+                    android:textColor="@color/red"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/addsp_edHinhanh"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:enabled="false"
+                        android:inputType="textMultiLine"
+                        android:minHeight="48dp"
+                        android:textColor="@color/black"
+                        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                    <ImageView
+                        android:id="@+id/addsp_openImage"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_image"
+
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/addsp_img"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Giá Bán"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:id="@+id/txtErrorGiaban"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Error"
+                    android:textColor="@color/red"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addsp_giasp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/white"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Số Lượng Có"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:id="@+id/txtErrorSl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Error"
+                    android:textColor="@color/red"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addsp_slco"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/white"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mô Tả"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+
+                    />
+                <TextView
+                    android:id="@+id/txtErrorMota"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Error"
+                    android:textColor="@color/red"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addsp_mota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="left"
+                    android:background="@color/white"
+                    android:inputType="textMultiLine"
+                    android:minLines="5"
+                    android:textColor="@color/black"
+                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID Video Youtube (nếu có)"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+
+                    />
+                <TextView
+                    android:id="@+id/txtErrorLinkvideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Error"
+                    android:textColor="@color/red"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_weight="1"
+                        android:id="@+id/addsp_linkvideo"
+                        android:layout_width="0dp"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@color/white"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/black"
+                        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/addsp_ktravideo"
+                        android:text="Kiểm tra"
+                        android:layout_gravity="center"
+                        android:background="@drawable/backgroudbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#C9D2D6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Thông Tin Sản Phẩm"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/txtErrorThongtin"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:text="Error"
+                        android:textColor="@color/red"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/addsp_thongtin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="left"
+                        android:background="@color/white"
+                        android:inputType="textMultiLine"
+                        android:minLines="8"
+                        android:textColor="@color/black"
+                        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddSp"
+        android:text="edit"
+        android:layout_width="match_parent"
+        android:background="@drawable/backgroudbtn"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAddSp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        <ProgressBar
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            />
+
+    </FrameLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.cuahangdientu">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_ltk_store"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_ltk_store"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CuaHangDienTu">
+        <activity
+            android:name=".activity.ThongBaoDonHangActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.YoutubeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.TinTucTheoDanhMucActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ChiTietTinTucActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.UserAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.TimKiemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ChiTietDonHangActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.DonHangUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ThanhToanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.GioHangActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ChiTietSanPhamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SanPhamTheoDanhMucActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.BeginActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.CuaHangDienTu.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

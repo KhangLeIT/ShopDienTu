@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginStart="30sp"
+    android:layout_marginEnd="30sp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:background="#C6CBE4"
+    >
+
+    <LinearLayout
+        android:id="@+id/item_click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/item_tensp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="Ten San Pham"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_click">
+
+        <ImageView
+            android:id="@+id/delete_DM"
+            android:layout_width="35dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/red"
+            android:src="@drawable/ic_delete"
+
+            />
+
+        <ImageView
+            android:id="@+id/edit_DM"
+            android:layout_width="35dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#FFC107"
+            android:src="@drawable/ic_baseline_edit_24"
+
+            />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".t_donhang.ChiTietDonHangActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:id="@+id/layoutbt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_weight="1"
+            android:id="@+id/capnhatTrangThai"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="cập nhật Trạng Thái"
+            android:textSize="15sp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/backgroudbtn"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_weight="1"
+            android:id="@+id/chitiet_thongtinUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Thông tin user"
+            android:textSize="15sp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/backgroudbtn"
+            />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_chiTietDH"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutbt" />
+    <LinearLayout
+        android:id="@+id/linearLayout10"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout9">
+
+        <TextView
+            android:id="@+id/chitiet_txtTrangThai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Trang Thái: "
+            android:layout_marginStart="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/chitiet_trangthai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:layout_marginEnd="10dp"
+            android:text="Hoàn Thành/25.8.2023"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tổng đơn hàng: "
+            android:layout_marginStart="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/chitiet_TongTien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:layout_marginEnd="10dp"
+            android:text="200 VNĐ"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        class="com.fragment.NavigationDrawerFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#B4D2EA"
+        android:fitsSystemWindows="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rec_chiTietDH"
+        app:layout_constraintEnd_toEndOf="@+id/rec_chiTietDH"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutbt"
+        app:layout_constraintVertical_bias="0.0">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/chiTiet_HuyDon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hủy Đơn Hàng" />
+                <RadioButton
+                    android:id="@+id/chiTiet_choDuyet"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Chờ Duyệt" />
+
+                <RadioButton
+                    android:id="@+id/chiTiet_Duyet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Duyệt đơn Hàng" />
+
+                <RadioButton
+                    android:id="@+id/chiTiet_GiaoHang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Giao Hàng" />
+
+                <RadioButton
+                    android:id="@+id/chiTiet_ThanhCong"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Thành Công" />
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/chiTiet_btnCapNhat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:text="Cập Nhật"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navViewUser"
+        class="com.fragment.NavigationDrawerFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#B4D2EA"
+        android:fitsSystemWindows="true"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/rec_chiTietDH"
+        app:layout_constraintEnd_toEndOf="@+id/rec_chiTietDH"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutbt"
+        app:layout_constraintVertical_bias="0.0">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/chiTiet_iduser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/chiTiet_gioitinh"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/user_icon_nam"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chiTiet_iduser" />
+
+            <TextView
+                android:id="@+id/chiTiet_tenUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên User"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chiTiet_gioitinh" />
+
+            <TextView
+                android:id="@+id/chiTiet_Email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="emailUser@gmail.com"
+                android:textColor="@color/black"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chiTiet_tenUser" />
+
+            <TextView
+                android:id="@+id/chiTiet_SDT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="0123456789"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chiTiet_Email" />
+
+            <TextView
+                android:id="@+id/chiTiet_DiaChi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:text="Địa Chỉ Giao Dịch"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chiTiet_SDT" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

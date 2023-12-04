@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content"
+    >
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@color/white"
+       >
+
+       <TextView
+           android:id="@+id/itemthongbao_iddonhang"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Thông báo đơn hàng số"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_marginTop="10dp"
+           android:textSize="18sp"
+           android:gravity="center"
+           android:textColor="@color/colorPrimary"
+           android:textStyle="bold"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <TextView
+           android:id="@+id/itemthongbao_noidung"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="đây là nội dung của thông báo"
+           android:textStyle="italic"
+           android:textColor="@color/black"
+           android:textSize="15sp"
+           android:layout_marginStart="10dp"
+           android:layout_marginEnd="10dp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/itemthongbao_iddonhang" />
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

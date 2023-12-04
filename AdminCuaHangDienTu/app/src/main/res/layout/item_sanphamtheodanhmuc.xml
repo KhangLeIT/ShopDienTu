@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_height="wrap_content"
+    android:minHeight="190dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="8dp"
+    app:cardCornerRadius="4dp"
+    android:gravity="center"
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/layoutWH"
+                android:layout_width="160dp"
+                android:layout_height="180dp"
+                >
+                <ImageView
+                    android:id="@+id/itemspm_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/itemspm_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:text="id sp"
+                    />
+                <TextView
+                    android:id="@+id/itemspm_tensp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="Tên Sản Phẩm"
+                    />
+                <TextView
+                    android:id="@+id/itemspm_giasp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:text="Giá: 5.000.000 VNĐ"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_weight="1"
+                        android:id="@+id/delete_DM"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_delete"
+                        android:background="@color/red"
+                        android:layout_gravity="center"
+
+                        />
+                    <ImageView
+                        android:layout_weight="1"
+                        android:id="@+id/edit_DM"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_baseline_edit_24"
+                        android:background="#FFC107"
+                        android:layout_gravity="center"
+
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</androidx.cardview.widget.CardView>
+
